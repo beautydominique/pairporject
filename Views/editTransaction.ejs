@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div>
+            <h1>Edit Your Transaction</h1>
+        </div>
+    </nav>
+    <div>
+        <form class="editT" action="/cashflow/<%=data.id%>/edit" method="post">
+            <div class="insertForm">
+                <label for="typeoftransaction">Type of Transaction</label>
+                <select name="typeOfTransaction">
+                        <option value="<%=data.typeOfTransaction%>"> <%=data.typeOfTransaction%></option>
+                </select>
+                <label for="amount">Amount</label>
+                <input type="number" name="amount" value="<%=data.amount%>">
+                <br><br>
+                <label for="description">Description</label>
+                <textarea name="description"><%=data.description%></textarea>  
+                <br><br>
+                <label for="dateOfTransaction">Requirement</label>    
+                <input type="date" name="dateOfTransaction" value="<%=data.dateOfTransaction%>">  
+                <br><br>
+                <a href="/cashflow"><input class="button" value="save" type="submit"></a>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+            </div>
+        </form>
+    </div>
+</body>
+</html>

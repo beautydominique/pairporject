@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="Opening">
+            <h1>This Month Cash Flow</h1>
+        </div>
+        <br>
+        <div>
+            <a href="/cashflow/add">Add Transaction</a>
+        </div>
+        <br>
+    </nav>
+    <div class="body">
+        <table class="tableCashFlow" border="1">
+            <tr>
+                <th>No</th>
+                <th>Type of Transaction</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Date of Transaction</th>
+                <th>Action</th>
+            </tr>
+            <%data.forEach((el, i)=>{%>
+                    <tr>
+                        <td><%=i+1%></td>
+                        <td><%=el.typeOfTransaction%></td>
+                        <td><%=el.amount%></td>
+                        <td><%=el.description%></td>
+                        <td><%=el.dateOfTransaction%></td>
+                        <td><a href="/cashflow/<%=el.id%>/edit">Edit</a></td>
+                        <td><a href="/cashflow/<%=el.id%>/delete">Delete</a></td>
+                    </tr>
+            <%})%>
+            </table>
+            <br>
+            <p>your balance is:  <%= data[data.length-1].balance %> </p>
+    </div>
+</body>
+</html>

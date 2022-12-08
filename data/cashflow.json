@@ -1,0 +1,11 @@
+[
+    {
+      "amount": 750000,
+      "description": "Makan di Hotel Mulia",
+      "balance": 9250000,
+      "ProfileId": 1,
+      "dateOfTransaction":"2021-07-20",
+      "typeOfTransaction": "Exspense"
+    }
+    
+  ]

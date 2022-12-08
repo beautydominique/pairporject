@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">  
+    <title>Login</title>
+</head>
+<body>
+    <% if(err) { %>
+        <p style="color:rgb(255, 208, 196) ;"> <%= err.error %> </p>
+   <%  } %> 
+    <h2 style="margin-left:45% ;">Login dulu</h2>
+    <div class="container">
+        <form action="/login", method="post"> 
+            <div class="mb-3">
+                <label for="username" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="username" id="username">
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" id="password">
+                <div>
+                    <p>Don't have any account?</p>  <a href="/register" style="color:blue; margin-left: 90% ;">Register</a>
+                </div>
+              </div>
+            
+              <button type="submit" class="btn btn-primary">Submit</button>
+            
+        </form>
+    </div>
+</body>
+</html>
